@@ -1,22 +1,26 @@
-version: '3.9'
+version: '3.10'
 
 services:
-  app:
+  server:
     build: .
-    container_name: nest_app
-    environment:
-      - NODE_ENV=production
     ports:
       - "3000:3000"
+    depends_on:
+      - db
+    env_file:
+      - .env
     restart: always
+    command: ["sh", "-c", "npm start"]
 
   nginx:
     depends_on:
-      - app
-    image: nginx:latest
+      - server
+    image: nginx
     ports:
-      - "80:80"
-      - "443:443"
+      - 80:80
+      - 443:443
     volumes:
       - ./nginx/conf.d:/etc/nginx/conf.d
-    restart: always
+
+volumes:
+  db-data:
