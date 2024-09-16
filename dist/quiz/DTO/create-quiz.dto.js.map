@@ -1,0 +1,1 @@
+{"version":3,"file":"create-quiz.dto.js","sourceRoot":"","sources":["../../../src/quiz/DTO/create-quiz.dto.ts"],"names":[],"mappings":";;;;;;;;;;;;AAAA,6CAA8C;AAE9C,MAAa,mBAAmB;CAM/B;AAND,kDAMC;AADC;IAJC,IAAA,qBAAW,EAAC;QACX,WAAW,EAAE,6BAA6B;QAC1C,OAAO,EAAE,CAAC,OAAO,EAAE,aAAa,EAAE,KAAK,CAAC;KACzC,CAAC;;oDACgB"}
