@@ -10,7 +10,7 @@ services:
 
   nginx:
     depends_on:
-      - server
+      - app
     image: nginx
     ports:
       - 80:80
