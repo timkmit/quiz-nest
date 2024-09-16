@@ -1,4 +1,4 @@
-version: '3.10'
+version: '3.9'
 
 services:
   app:
@@ -11,9 +11,10 @@ services:
   nginx:
     depends_on:
       - app
-    image: nginx
+    image: nginx:latest
     ports:
-      - 80:80
-      - 443:443
+      - "80:80"
+      - "443:443"
     volumes:
       - ./nginx/conf.d:/etc/nginx/conf.d
+    restart: always
